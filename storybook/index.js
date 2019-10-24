@@ -1,12 +1,11 @@
 import {AppRegistry} from 'react-native';
 import {getStorybookUI, configure} from '@storybook/react-native';
-
-// import './config';
 import './rn-addons';
 
-// import stories
+import {loadStories} from './storyLoader';
+
 configure(() => {
-  require('../src/components');
+  loadStories();
 }, module);
 
 const StorybookUIRoot = getStorybookUI({});

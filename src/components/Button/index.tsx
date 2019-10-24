@@ -2,14 +2,24 @@ import React, {
   FunctionComponentElement,
   FunctionComponent,
   Component,
+  ReactNode,
 } from 'react';
-import {GestureResponderEvent, TouchableOpacity} from 'react-native';
+import {
+  GestureResponderEvent,
+  TouchableOpacity,
+  TouchableOpacityComponent,
+  Touchable,
+  TouchableOpacityProps,
+} from 'react-native';
 
 type ButtonProps = {
-  children: string;
-  onPress: function(event: GestureResponderEvent): void;
+  children: ReactNode;
+  onPress: (event: GestureResponderEvent) => void;
 };
 
-export default function Button({children, onPress}: ButtonProps) {
+export default function Button({
+  children,
+  onPress,
+}: ButtonProps): FunctionComponentElement<{}> {
   return <TouchableOpacity onPress={onPress}>{children}</TouchableOpacity>;
 }

@@ -5,9 +5,8 @@ import {storiesOf} from '@storybook/react-native';
 import {action} from '@storybook/addon-actions';
 import {linkTo} from '@storybook/addon-links';
 
-// eslint-disable-next-line import/extensions
-import Button from './Button';
-import CenterView from './CenterView';
+import Button from './index';
+import CenterView from '../CenterView';
 
 storiesOf('Button', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
