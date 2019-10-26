@@ -9,7 +9,7 @@ export const Container = styled.View`
 
 export const CenterView = styled.View`
   flex: 1;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 `;
 

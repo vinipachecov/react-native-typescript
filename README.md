@@ -10,14 +10,20 @@ What is already in:
 
 - Typescript
 - Tslint
-- React-navigation
+- React-Navigation
+  - Using Hooks useNavigation
+  - Navigation Service to navigate outside components
 - Styled Components
 - Prettier Configuration
 - Yarn
 - React Native Paper
+- Storybook
 
 # Goals
 
 - Jest integration
 - Folder Structure for Redux
 - Detox E2E testing
+- Redux
+- Context API
+- i18n
