@@ -1,12 +1,14 @@
 import React from 'react';
 import {Container, CenterView, Button} from '../../styles/styled/common';
 import {Text} from 'react-native';
-import {Navigationinterface} from '../../interfaces/NavigationInterface';
 import {Routes} from '../../Navigation/Routes';
+import {useNavigation} from 'react-navigation-hooks';
 
-export default function A({navigation}: Navigationinterface) {
+export default function A() {
+  const {navigate} = useNavigation();
+
   function navigateToScreenB() {
-    navigation.navigate(Routes.B);
+    navigate(Routes.B);
     console.log('navigating to screen B');
   }
   return (

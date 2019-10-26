@@ -8,7 +8,8 @@ export const Container = styled.View`
 `;
 
 export const CenterView = styled.View`
-  justify-content: center;
+  flex: 1;
+  justify-content: flex-start;
   align-items: center;
 `;
 

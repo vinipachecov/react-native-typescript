@@ -4,13 +4,7 @@ import React, {
   Component,
   ReactNode,
 } from 'react';
-import {
-  GestureResponderEvent,
-  TouchableOpacity,
-  TouchableOpacityComponent,
-  Touchable,
-  TouchableOpacityProps,
-} from 'react-native';
+import {GestureResponderEvent, TouchableOpacity} from 'react-native';
 
 type ButtonProps = {
   children: ReactNode;
