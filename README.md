@@ -34,7 +34,6 @@ What is already in:
 - Styled Components
 - Prettier Configuration
 - Yarn
-- React Native Paper
 - Storybook
 - Redux
   - Folder Structure for Redux
@@ -42,6 +41,7 @@ What is already in:
 
 ## Goals
 
+- React Native Paper
 - Jest integration
 - Detox E2E testing
 - Redux Saga
