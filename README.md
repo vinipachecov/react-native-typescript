@@ -36,7 +36,7 @@ What is already in:
 - Yarn
 - Storybook
 - Redux
-  - Folder Structure for Redux
+  - Folder Structure
   - Duck pattern
 
 ## Goals
