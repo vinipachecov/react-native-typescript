@@ -2,12 +2,12 @@ import React from 'react';
 import {Container, CenterView, Button} from '../../styles/styled/common';
 import {Text} from 'react-native';
 import {Routes} from '../../Navigation/Routes';
-import {useNavigation} from 'react-navigation-hooks';
 import NavigationService from '../../Navigation/NavigationService';
+import withTodos from '../../containers/todos';
+import {ScreenAprops} from '../../interfaces/ScreenProps';
 
-export default function A() {
-  const {navigate} = useNavigation();
-
+export function A(props: ScreenAprops) {
+  console.log(props);
   function navigateToScreenB() {
     NavigationService.navigate(Routes.B, {});
     console.log('navigating to screen B');
@@ -24,3 +24,5 @@ export default function A() {
     </Container>
   );
 }
+
+export default withTodos(A);
