@@ -2,9 +2,27 @@
 
 This repo is a seed for helping people (and myself) on starting new project with React native with typescript.
 
-It's goals is to make typescript patterns explainable and more intuitive.
+It's goals is to make typescript patterns explainable and more intuitive. The idea is to give a hint on how a react native project can be structured.
 
-# Current State
+## Screen props and AppProps
+
+- ScreenProps is what I call as the props of a specific screen
+- AppProps are props of the redux store combined with other middlewares like react-navigation
+
+## Containers
+
+I pattern I like is to centralize actions into a component and use it as a HOC for screens where they will need some actions.
+
+### Pros
+
+- Easier refactor
+- Code Splitting
+
+### Cons
+
+- Maybe performance can suffer from this.
+
+## Current State
 
 What is already in:
 
@@ -22,7 +40,7 @@ What is already in:
   - Folder Structure for Redux
   - Duck pattern
 
-# Goals
+## Goals
 
 - Jest integration
 - Detox E2E testing
