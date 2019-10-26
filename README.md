@@ -18,14 +18,14 @@ What is already in:
 - Yarn
 - React Native Paper
 - Storybook
+- Redux
+  - Folder Structure for Redux
+  - Duck pattern
 
 # Goals
 
 - Jest integration
-- Folder Structure for Redux
 - Detox E2E testing
-- Redux
 - Redux Saga
-  - Duck pattern
 - Context API
 - i18n
