@@ -25,5 +25,7 @@ What is already in:
 - Folder Structure for Redux
 - Detox E2E testing
 - Redux
+- Redux Saga
+  - Duck pattern
 - Context API
 - i18n
