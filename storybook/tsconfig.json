@@ -17,7 +17,7 @@
     "strictNullChecks": true,
     "declaration": true
   },
-  "include": ["src/**/*"],
+  "include": ["App/**/*"],
   "exclude": [
     "node_modules",
     "build",
@@ -26,7 +26,7 @@
     "acceptance-tests",
     "webpack",
     "jest",
-    "src/setupTests.ts",
+    "App/setupTests.ts",
     "**/*/*.test.ts",
     "examples"
   ]

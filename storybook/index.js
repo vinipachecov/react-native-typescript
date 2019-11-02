@@ -1,8 +1,8 @@
-import {AppRegistry} from 'react-native';
-import {getStorybookUI, configure} from '@storybook/react-native';
+import { AppRegistry } from 'react-native';
+import { getStorybookUI, configure } from '@storybook/react-native';
 import './rn-addons';
 
-import {loadStories} from './storyLoader';
+import { loadStories } from './storyLoader';
 
 configure(() => {
   loadStories();

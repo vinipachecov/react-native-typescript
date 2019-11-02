@@ -38,12 +38,19 @@ What is already in:
 - Redux
   - Folder Structure
   - Duck pattern
+- React-native-config for .env configurations and multiple environments
+- Detox E2E testing
 
 ## Goals
 
 - React Native Paper
 - Jest integration
-- Detox E2E testing
 - Redux Saga
 - Context API
 - i18n
+
+## Env variables
+
+I'm using react-native-dotenv because I think it is easier to use than react-native-config, although to use it we need a hack to use it with typescript.
+
+To add new variables and have intellisense help we need to add it to the env.ts file.

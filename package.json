@@ -8,11 +8,14 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint --fix .",
+    "e2e:build": "detox build --configuration ios.sim.debug",
+    "e2e:test": "detox test --configuration ios.sim.debug",
     "storybook": "start-storybook -p 7007",
     "prestorybook": "rnstl"
   },
   "dependencies": {
     "@types/react-redux": "^7.1.5",
+    "dotenv": "^8.2.0",
     "react": "16.9.0",
     "react-native": "0.61.2",
     "react-native-gesture-handler": "^1.4.1",
@@ -47,11 +50,13 @@
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-require-context-hook": "^1.0.0",
+    "detox": "^14.5.1",
     "eslint": "^6.5.1",
     "jest": "^24.9.0",
     "metro-react-native-babel-preset": "^0.56.0",
     "react-docgen-typescript-loader": "^3.3.0",
     "react-dom": "16.9.0",
+    "react-native-dotenv": "^0.2.0",
     "react-native-storybook-loader": "^1.8.1",
     "react-native-typescript-transformer": "^1.2.13",
     "react-test-renderer": "16.9.0",
@@ -61,7 +66,7 @@
   "config": {
     "react-native-storybook-loader": {
       "searchDir": [
-        "./src/components"
+        "./App/components"
       ],
       "pattern": "**/*.stories.tsx",
       "outputFile": "./storybook/storyLoader.js"
@@ -84,5 +89,18 @@
       "<rootDir>/node_modules/"
     ],
     "cacheDirectory": ".jest/cache"
+  },
+  "detox": {
+    "configurations": {
+      "ios.sim.debug": {
+        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/seedStarter.app",
+        "build": "xcodebuild -workspace ios/seedStarter.xcworkspace -scheme seedStarter -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+        "type": "ios.simulator",
+        "device": {
+          "type": "iPhone 11 Pro"
+        }
+      }
+    },
+    "test-runner": "jest"
   }
 }
