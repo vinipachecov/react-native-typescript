@@ -8,6 +8,4 @@ import { name as appName } from './app.json';
 import { env } from './env';
 import Storybook from './storybook';
 
-AppRegistry.registerComponent(appName, () =>
-  !env.STORYBOOK ? Storybook : App,
-);
+AppRegistry.registerComponent(appName, () => (env.STORYBOOK ? Storybook : App));

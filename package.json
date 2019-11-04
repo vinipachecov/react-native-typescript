@@ -10,7 +10,7 @@
     "lint": "eslint --fix .",
     "e2e:build": "detox build --configuration ios.sim.debug",
     "e2e:test": "detox test --configuration ios.sim.debug",
-    "storybook": "start-storybook -p 7007",
+    "storybook": "start-storybook",
     "prestorybook": "rnstl"
   },
   "dependencies": {
