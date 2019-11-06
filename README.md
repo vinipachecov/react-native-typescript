@@ -26,22 +26,22 @@ I pattern I like is to centralize actions into a component and use it as a HOC f
 
 What is already in:
 
-- Typescript
+- [Typescript](https://facebook.github.io/react-native/docs/typescript)
 - Tslint
-- React-Navigation
+- [React-Navigation](https://www.npmjs.com/package/react-navigation)
   - Using Hooks useNavigation
   - Navigation Service to navigate outside components
-- Styled Components
+- [Styled Components](npmjs.com/package/styled-components)
 - Prettier Configuration
 - Yarn
-- Storybook
-- Redux
+- [Storybook](https://storybook.js.org/docs/guides/guide-react-native/)
+- [Redux](redux)
   - Folder Structure
-  - Duck pattern
-- React-native-config for .env configurations and multiple environments
-- Detox E2E testing
-- React Native Testing library (Unit Testing)
-- Jest integration
+  - [Duck pattern](https://blog.rocketseat.com.br/estrutura-redux-escalavel-com-ducks/)
+- [React-native-dotenv](https://github.com/zetachang/react-native-dotenv) for .env configurations and multiple environments
+- [Detox E2E testing](https://github.com/wix/Detox)
+- [React Native Testing library](https://github.com/callstack/react-native-testing-library) (Unit Testing)
+- [Jest integration](https://jestjs.io/docs/en/tutorial-react-native)
 
 ## Goals
 
@@ -51,6 +51,7 @@ What is already in:
 - Redux Saga
 - Context API
 - i18n
+- Semver
 
 ## Env variables
 
