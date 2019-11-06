@@ -43,6 +43,7 @@ What is already in:
 
 ## Goals
 
+- React Native Testing library
 - React Native Paper
 - Jest integration
 - Redux Saga
