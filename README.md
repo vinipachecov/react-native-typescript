@@ -41,11 +41,13 @@ What is already in:
 - React-native-config for .env configurations and multiple environments
 - Detox E2E testing
 - React Native Testing library (Unit Testing)
+- Jest integration
 
 ## Goals
 
-- React Native Paper
-- Jest integration
+- Theming
+- offline status checker
+- offline saga queue
 - Redux Saga
 - Context API
 - i18n
