@@ -40,10 +40,10 @@ What is already in:
   - Duck pattern
 - React-native-config for .env configurations and multiple environments
 - Detox E2E testing
+- React Native Testing library (Unit Testing)
 
 ## Goals
 
-- React Native Testing library
 - React Native Paper
 - Jest integration
 - Redux Saga
