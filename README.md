@@ -42,6 +42,8 @@ What is already in:
 - [Detox E2E testing](https://github.com/wix/Detox)
 - [React Native Testing library](https://github.com/callstack/react-native-testing-library) (Unit Testing)
 - [Jest integration](https://jestjs.io/docs/en/tutorial-react-native)
+- [Formik example](https://jaredpalmer.com/formik/docs/overview)
+- [Final Form](https://github.com/final-form/react-final-form)
 
 ## Goals
 
@@ -58,3 +60,5 @@ What is already in:
 I'm using react-native-dotenv because I think it is easier to use than react-native-config, although to use it we need a hack to use it with typescript.
 
 To add new variables and have intellisense help we need to add it to the env.ts file.
+
+PS: To see changes, the library says we need to edit the .env file where we import or something.
