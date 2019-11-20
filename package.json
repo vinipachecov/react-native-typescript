@@ -14,10 +14,14 @@
     "prestorybook": "rnstl"
   },
   "dependencies": {
+    "@react-native-community/async-storage": "^1.6.3",
+    "@react-native-community/netinfo": "^4.6.1",
+    "@redux-offline/redux-offline": "^2.5.2-native.1",
     "@types/react-redux": "^7.1.5",
     "@types/yup": "^0.26.24",
     "dotenv": "^8.2.0",
     "final-form": "^4.18.5",
+    "firebase": "^7.4.0",
     "formik": "^2.0.3",
     "react": "16.9.0",
     "react-final-form": "^6.3.0",
@@ -27,9 +31,11 @@
     "react-native-vector-icons": "^6.6.0",
     "react-navigation": "^4.0.10",
     "react-navigation-hooks": "^1.1.0",
+    "react-navigation-stack": "^1.10.3",
     "react-redux": "^7.1.1",
     "redux": "^4.0.4",
     "redux-saga": "^1.1.1",
+    "storybook-addon-figma": "^0.1.0",
     "styled-components": "^4.4.0",
     "yup": "^0.27.0"
   },
@@ -38,6 +44,7 @@
     "@babel/runtime": "^7.6.3",
     "@react-native-community/eslint-config": "^0.0.5",
     "@storybook/addon-actions": "^5.2.5",
+    "@storybook/addon-docs": "^5.2.6",
     "@storybook/addon-info": "^5.2.5",
     "@storybook/addon-links": "^5.2.5",
     "@storybook/addons": "^5.2.5",
@@ -67,6 +74,7 @@
     "react-native-typescript-transformer": "^1.2.13",
     "react-test-renderer": "16.9.0",
     "ts-jest": "^24.1.0",
+    "ts-loader": "^6.2.1",
     "typescript": "^3.6.4"
   },
   "config": {

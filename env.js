@@ -1,10 +1,27 @@
-import { STORYBOOK, API, DB } from 'react-native-dotenv';
+import {
+  STORYBOOK,
+  API,
+  DB,
+  apiKey,
+  authDomain,
+  databaseURL,
+  projectId,
+  storageBucket,
+  messagingSenderId,
+  appId,
+} from 'react-native-dotenv';
 
 export const env = {
   STORYBOOK,
   API,
   DB,
-  ANOTHER_CONFIG: 'foobar',
+  apiKey,
+  authDomain,
+  databaseURL,
+  projectId,
+  storageBucket,
+  messagingSenderId,
+  appId,
 };
 
 export default env;

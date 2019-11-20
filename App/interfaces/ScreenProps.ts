@@ -1,4 +1,4 @@
-import {TodoState} from '../redux/ducks/todos';
+import { PostState, withPostsActions } from '../redux/ducks/post';
 import {
   NavigationParams,
   NavigationScreenProp,
@@ -6,11 +6,16 @@ import {
 } from 'react-navigation';
 
 export interface ScreenAprops {
-  todos: TodoState;
+  posts: PostState;
   navigation: NavigationScreenProp<NavigationState, NavigationParams>;
 }
 
 export interface ScreenBprops {
+  navigation: NavigationScreenProp<NavigationState, NavigationParams>;
+}
+
+export interface ScreenCprops extends withPostsActions {
+  posts: PostState;
   navigation: NavigationScreenProp<NavigationState, NavigationParams>;
 }
 

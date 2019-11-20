@@ -47,11 +47,12 @@ What is already in:
 
 ## Goals
 
-- Theming
-- offline status checker
-- offline saga queue
+- Dependency injection with inversify.js
 - Redux Saga
 - Context API
+- offline status checker
+- offline saga queue
+- Theming
 - i18n
 - Semver
 

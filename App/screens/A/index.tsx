@@ -3,7 +3,7 @@ import { Container, CenterView, Button } from '../../styles/styled/common';
 import { Text, TextInput, View } from 'react-native';
 import { Routes } from '../../Navigation/Routes';
 import NavigationService from '../../Navigation/NavigationService';
-import withTodos from '../../containers/todos';
+import withPosts from '../../containers/posts';
 import { ScreenAprops } from '../../interfaces/ScreenProps';
 import { env } from '../../../env';
 import { Formik } from 'formik';
@@ -41,8 +41,9 @@ const FormComponent = () => (
               height: 42,
               width: '100%',
               borderWidth: 1,
-              borderColor: 'red',
+              borderColor: '#lightgray',
               marginBottom: 10,
+              borderRadius: 8,
             }}
           />
           <TextInput
@@ -55,7 +56,8 @@ const FormComponent = () => (
               height: 42,
               width: '100%',
               borderWidth: 1,
-              borderColor: 'red',
+              borderColor: '#lightgray',
+              borderRadius: 8,
             }}
           />
           <Button title="Submit Form" onPress={submitForm} />
@@ -66,10 +68,9 @@ const FormComponent = () => (
 );
 
 export function A(props: ScreenAprops) {
-  console.log(env.DB);
-  function navigateToScreenB() {
-    NavigationService.navigate(Routes.B, {});
-    console.log('navigating to screen B');
+  console.log(props);
+  function navigateToScreen(screen: string) {
+    NavigationService.navigate(screen, {});
   }
   return (
     <Container>
@@ -77,7 +78,11 @@ export function A(props: ScreenAprops) {
         <Text>Screen A</Text>
         <Button
           title={'Change to Screen B'}
-          onPress={() => navigateToScreenB()}
+          onPress={() => navigateToScreen(Routes.B)}
+        />
+        <Button
+          title={'Change to Screen C'}
+          onPress={() => navigateToScreen(Routes.C)}
         />
         <Text>Form with Formik</Text>
         <FormComponent />
@@ -86,4 +91,4 @@ export function A(props: ScreenAprops) {
   );
 }
 
-export default withTodos(A);
+export default withPosts(A);

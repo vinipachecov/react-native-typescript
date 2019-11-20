@@ -1,17 +1,30 @@
-import {createSwitchNavigator} from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 import A from '../screens/A';
 import B from '../screens/B';
-import {Routes} from './Routes';
+import { Routes } from './Routes';
+import C from '../screens/C';
 
-const stack = createSwitchNavigator({
-  A: {
-    path: Routes.A,
-    screen: A,
+const stack = createStackNavigator(
+  {
+    A: {
+      path: Routes.A,
+      screen: A,
+    },
+    B: {
+      path: Routes.B,
+      screen: B,
+    },
+    C: {
+      path: Routes.C,
+      screen: C,
+      navigationOptions: () => ({
+        title: 'Screen C',
+      }),
+    },
   },
-  B: {
-    path: Routes.B,
-    screen: B,
+  {
+    headerMode: 'screen',
   },
-});
+);
 
 export default stack;
