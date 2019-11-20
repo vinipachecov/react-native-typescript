@@ -24,6 +24,7 @@ const stack = createStackNavigator(
   },
   {
     headerMode: 'screen',
+    initialRouteName: Routes.C,
   },
 );
 

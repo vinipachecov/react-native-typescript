@@ -17,10 +17,7 @@ export function C(props: ScreenCprops) {
         </View>
       )}
       ListFooterComponent={
-        <Button
-          title={'Load more posts'}
-          onPress={() => console.log('loading more posts')}
-        />
+        <Button title={'Load more posts'} onPress={() => props.getPosts()} />
       }
     />
   );

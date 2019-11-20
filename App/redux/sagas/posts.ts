@@ -1,5 +1,5 @@
 import { put } from 'redux-saga/effects';
 
-export function* getPostsSaga(action) {
+export function* getPostsSaga() {
   console.log('in saga!');
 }

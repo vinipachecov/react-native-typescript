@@ -1,12 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Dispatch, bindActionCreators } from 'redux';
 import { AppProps } from '../../interfaces/AppProps';
-import {
-  addPost,
-  removePost,
-  getPosts,
-  withPostsActions,
-} from '../../redux/ducks/post';
+import { addPost, removePost, getPosts } from '../../redux/ducks/post';
 import { ScreenDefaultProps } from '../../interfaces/ScreenProps';
 
 const withPosts = (WrappedComponent: Function) => {
@@ -16,11 +12,16 @@ const withPosts = (WrappedComponent: Function) => {
     };
   };
 
-  const mapDispatchToProps: withPostsActions = {
-    getPosts,
+  const PostActions = {
     addPost,
+    getPosts,
     removePost,
   };
+
+  const mapDispatchToProps = (dispatch: Dispatch) => ({
+    dispatch,
+    ...bindActionCreators(PostActions, dispatch),
+  });
 
   const PostComponent = (props: ScreenDefaultProps) => (
     <WrappedComponent {...props} />

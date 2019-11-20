@@ -3,5 +3,5 @@ import { PostTypes } from '../ducks/post';
 import * as PostSagas from './posts';
 
 export default function* rootSaga() {
-  all([takeLeading(PostTypes.GET_LIST, PostSagas.getPostsSaga)]);
+  yield all([takeLeading(PostTypes.GET_LIST, PostSagas.getPostsSaga)]);
 }

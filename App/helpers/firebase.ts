@@ -12,5 +12,7 @@ export function initFirebase() {
     appId: env.appId,
   };
   // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+  if (firebase.apps.length === 0) {
+    firebase.initializeApp(firebaseConfig);
+  }
 }
