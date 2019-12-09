@@ -1,24 +1,16 @@
 import React, { useEffect } from 'react';
-import { Button } from '../../styles/styled/common';
-import { Text, FlatList, View } from 'react-native';
 import withPosts from '../../containers/posts';
 import { ScreenCprops } from '../../interfaces/ScreenProps';
+import PostList from '../../components/PostList';
 
 export function C(props: ScreenCprops) {
   useEffect(() => {
-    props.getPosts();
+    props.getPostListRequest();
   }, []);
   return (
-    <FlatList
+    <PostList
       data={props.posts.postList}
-      renderItem={({ item }) => (
-        <View>
-          <Text>123</Text>
-        </View>
-      )}
-      ListFooterComponent={
-        <Button title={'Load more posts'} onPress={() => props.getPosts()} />
-      }
+      onFetchPosts={props.getPostListRequest}
     />
   );
 }

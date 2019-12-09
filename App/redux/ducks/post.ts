@@ -1,67 +1,50 @@
-import { Interface } from 'readline';
+import { PostI } from 'services/PostService';
+import Immutable, { ImmutableObject } from 'seamless-immutable';
+import { createReducer } from 'reduxsauce';
 
-export const PostTypes = {
-  GET_LIST: 'get/POSTS',
-  ADD: 'add/POST',
-  REMOVE: 'remove/POST',
+export const postTypes = {
+  GET_POST_LIST_REQUEST: 'GET_POST_LIST_REQUEST',
+  GET_POST_LIST_SUCCESS: 'GET_POST_LIST_SUCCESS',
 };
 
-export function addPost(payload: string): PostActions {
-  return {
-    type: PostTypes.ADD,
-    payload,
-  };
-}
-interface addPostAction {
-  type: string;
-  payload: string;
-}
-
-export function removePost(payload: string): PostActions {
-  return {
-    type: PostTypes.REMOVE,
-    payload,
-  };
-}
-interface removePostAction {
-  type: string;
-  payload: string;
-}
-
-interface getPostsAction {
-  type: string;
-}
-export const getPosts = (): getPostsAction => ({
-  type: PostTypes.GET_LIST,
+const getPostListRequest = () => ({
+  type: postTypes.GET_POST_LIST_REQUEST,
 });
 
-const initialState: PostState = {
-  postList: [],
+const getPostListSuccess = (posts: PostI[]) => ({
+  type: postTypes.GET_POST_LIST_SUCCESS,
+  posts,
+});
+
+export const postActions = {
+  getPostListRequest,
+  getPostListSuccess,
 };
 
-export interface PostState {
-  postList: string[];
+interface getPostsListRequestAction {
+  type: string;
+}
+interface getPostsSucessAction {
+  type: string;
+  posts: PostI[];
 }
 
 export interface withPostsActions {
-  getPosts: () => getPostsAction;
-  addPost: (payload: string) => addPostAction;
-  removePost: (payload: string) => removePostAction;
+  getPostListRequest: () => getPostsListRequestAction;
+  getPostListSuccess: (data: PostI[]) => getPostsSucessAction;
 }
 
-export interface withPostProps {
-  posts: PostState;
+const initialState: ImmutableObject<PostState> = Immutable({
+  postList: [],
+});
+
+export interface PostState {
+  postList: PostI[];
 }
 
-type PostActions = addPostAction | removePostAction;
-
-export default function(state = initialState, action: PostActions): PostState {
-  switch (action.type) {
-    case PostTypes.ADD:
-      return { ...state, postList: [...state.postList, action.payload] };
-    case PostTypes.REMOVE:
-      return { ...state, postList: [...state.postList, action.payload] };
-    default:
-      return state;
-  }
-}
+export const reducer = createReducer(initialState, {
+  [postTypes.GET_POST_LIST_SUCCESS]: (
+    state: ImmutableObject<PostState>,
+    { posts }: getPostsSucessAction,
+  ) => state.update('postList', postList => [...posts, ...postList]),
+});

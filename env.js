@@ -1,6 +1,6 @@
 import {
   STORYBOOK,
-  API,
+  POST_API,
   DB,
   apiKey,
   authDomain,
@@ -13,7 +13,7 @@ import {
 
 export const env = {
   STORYBOOK,
-  API,
+  POST_API,
   DB,
   apiKey,
   authDomain,

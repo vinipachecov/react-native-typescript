@@ -1,6 +1,6 @@
 export interface Env {
   STORYBOOK: string;
-  API: string;
+  POST_API: string;
   DB: string;
   apiKey: string;
   authDomain: string;

@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Dispatch, bindActionCreators } from 'redux';
 import { AppProps } from '../../interfaces/AppProps';
-import { addPost, removePost, getPosts } from '../../redux/ducks/post';
+import { postActions } from '../../redux/ducks/post';
 import { ScreenDefaultProps } from '../../interfaces/ScreenProps';
 
 const withPosts = (WrappedComponent: Function) => {
@@ -12,15 +12,9 @@ const withPosts = (WrappedComponent: Function) => {
     };
   };
 
-  const PostActions = {
-    addPost,
-    getPosts,
-    removePost,
-  };
-
   const mapDispatchToProps = (dispatch: Dispatch) => ({
     dispatch,
-    ...bindActionCreators(PostActions, dispatch),
+    ...bindActionCreators(postActions, dispatch),
   });
 
   const PostComponent = (props: ScreenDefaultProps) => (

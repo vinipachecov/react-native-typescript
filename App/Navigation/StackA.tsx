@@ -3,6 +3,7 @@ import A from '../screens/A';
 import B from '../screens/B';
 import { Routes } from './Routes';
 import C from '../screens/C';
+import { StackB } from './StackB';
 
 const stack = createStackNavigator(
   {
@@ -21,10 +22,17 @@ const stack = createStackNavigator(
         title: 'Screen C',
       }),
     },
+    D: {
+      path: Routes.D,
+      screen: StackB,
+      navigationOptions: {
+        header: null,
+      },
+    },
   },
   {
     headerMode: 'screen',
-    initialRouteName: Routes.C,
+    initialRouteName: Routes.D,
   },
 );
 
